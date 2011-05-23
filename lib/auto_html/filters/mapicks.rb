@@ -1,5 +1,5 @@
 AutoHtml.add_filter(:mapicks).with(:width => 425, :height => 350, :frameborder => 0) do |text, options|
-  regex = /http:\/\/(www.)?mapicks\.com\/maps\/(\d+)(.*)?(\&\S+)?/
+  regex = /http:\/\/(www.)?mapicks\.com\/maps\/(\d+)([A-Za-z0-9._%-]*)(\&\S+)?/
   text.gsub(regex) do
     map_id = $2
     url_text = $3
